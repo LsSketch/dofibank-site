@@ -1,0 +1,254 @@
+/* V3 Corrigido */
+@font-face {
+  font-family: 'TitleFont';
+  src: url('../fonts/title.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DescriptionFont';
+  src: url('../fonts/description.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplicação de fontes */
+.logo,
+.top-button,
+.main-title,
+.section-title,
+.download-button {
+  font-family: 'TitleFont', Arial, sans-serif;
+}
+
+p,
+.description,
+.intro-text,
+.step p,
+footer p {
+  font-family: 'DescriptionFont', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-button {
+  background-color: #fff;
+  border: 2px solid #eee;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 100px;
+  font-weight: bold;
+  color: #444;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.main-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+}
+
+.hero-image img {
+  max-width: 60%;
+  height: auto;
+}
+
+.download-button {
+  background-color: #009476;
+  color: white;
+  padding: 14px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: 'TitleFont', Arial, sans-serif;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.download-button:hover {
+  background-color: #007f64;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.how-it-works {
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.steps .step:nth-child(1) {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.steps .step:nth-child(2),
+.steps .step:nth-child(3) {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step img {
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+footer {
+  padding: 20px 0;
+}
+
+.copy {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  font-family: 'DescriptionFont', Arial, sans-serif;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+
+  .main-title {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .top-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .step {
+    width: 100px;
+  }
+
+  .step img {
+    max-width: 80px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+  }
+}
