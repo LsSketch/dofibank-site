@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (downloadButton) {
     downloadButton.addEventListener("click", function () {
-      window.location.href = "https://github.com/LsSketch/DofiBank-web/raw/refs/heads/main/DofiBank-v2.apk";
+      window.location.href = "https://github.com/LsSketch/DofiBank-web/raw/refs/heads/main/DofiBank.apk";
     });
   }
 
   if (topButton) {
     topButton.addEventListener("click", function () {
-      window.location.href = "https://github.com/LsSketch/DofiBank-web/raw/refs/heads/main/DofiBank-v2.apk";
+      window.location.href = "https://github.com/LsSketch/DofiBank-web/raw/refs/heads/main/DofiBank.apk";
     });
   }
 });
